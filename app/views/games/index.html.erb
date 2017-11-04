@@ -1,9 +1,9 @@
-<h1>Games#index</h1>
+<h1>Games</h1>
 <% @games.each do |game| %>
   <h2><%= game.title %></h2>
-  <p><%= number_to_currency game.price %></p>
+  <p><strong>Price:</strong> <%= number_to_currency game.price %></p>
+  <p><strong>Quantity:</strong> <%= number_to_currency game.stock_quantity %></p>
   <a href="/games/<%= game.id %>"></a>
-  <%= link_to 'Details Shor Form', game %>
-  <%= link_to 'Details Medi Form', game_path(game) %>
-  <%= link_to 'Details Long Form', game_path(id: game.id) %>
+  <%= link_to 'Details', game %>
+  <!--<%= link_to 'Details', game_path(game) %> <%= link_to 'Details', game_path(id: game.id) %>-->
 <% end %>
