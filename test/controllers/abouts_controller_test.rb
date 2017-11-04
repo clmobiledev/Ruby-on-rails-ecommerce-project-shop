@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class AboutControllerTest < ActionDispatch::IntegrationTest
+class AboutsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get about_index_url
+    get abouts_index_url
     assert_response :success
   end
 

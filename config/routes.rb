@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'abouts/index'
+
   get 'contact/index'
 
   get 'about/index'
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 	resources :games, only: [:index, :show]
+  resources :abouts, only: [:index, :show, :edit]
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
