@@ -5,5 +5,5 @@ class Game < ApplicationRecord
   
   validates :title, :stock_quantity, :price, presence: true
   validates :price, :stock_quantity, numericality: true
-  validates :name, uniqueness: true
+  validates :title, uniqueness: true
 end
