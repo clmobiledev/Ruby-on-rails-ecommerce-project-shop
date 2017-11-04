@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 	resources :games, only: [:index, :show]
+  resources :developers, only: [:index, :show]
   resources :abouts, only: [:index, :show, :edit]
   resources :contacts, only: [:index, :show, :edit]
   
