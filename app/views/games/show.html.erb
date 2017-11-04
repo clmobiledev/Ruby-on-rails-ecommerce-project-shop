@@ -1,2 +1,4 @@
 <h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<h2><%= @game.title %></h2>
+<p><%= number_to_currency @game.price %></p>
+<%= link_to 'Back', games_path %>
