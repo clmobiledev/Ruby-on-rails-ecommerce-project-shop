@@ -5,4 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AdminUser.create!(email: 'jwilliams42@academic.rrc.ca', password: 'password', password_confirmation: 'password') if Rails.env.development?
+# AdminUser.create!(email: 'jwilliams42@academic.rrc.ca', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+# Game.create(title: 'Super Ghouls n Ghosts', 
+            # release_date: '1991-11-28', 
+            # price: 30, 
+            # stock_quantity: 2, 
+            # image_url: 'super_ghouls_n_ghosts.jpg', 
+            # developer_id: 3, 
+            # genre_id: 7)
