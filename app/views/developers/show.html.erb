@@ -1,3 +1,9 @@
-<h1>Developers#show</h1>
-<h2><%= @developer.name %></h2>
+<h1>Developers</h1>
+<% @developers.each do |developer| %>
+  <h2><%= developer.name %></h2>
+  <% developer.games.each do |game| %>
+    <h3><%= game.title %></h3>
+    <p><a href="/games/<%= game.id %>"><%= image_tag game.image_url %></a></p>
+  <% end %>
+<% end %>
 <%= link_to 'Back', developers_path %>

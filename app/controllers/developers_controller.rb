@@ -4,6 +4,6 @@ class DevelopersController < ApplicationController
   end
 
   def show
-    @developer = Developer.find(params[:id])
+    @developers = Developer.includes(:games).where(:id => params[:id])
   end
 end
