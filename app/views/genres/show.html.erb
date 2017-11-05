@@ -1,2 +1,9 @@
-<h1>Genres#show</h1>
-<p>Find me in app/views/genres/show.html.erb</p>
+<h1>Genres</h1>
+<% @genres.each do |genre| %>
+  <h2><%= genre.name %></h2>
+  <% genre.games.each do |game| %>
+    <h3><%= game.title %></h3>
+    <p><a href="/games/<%= game.id %>"><%= image_tag game.image_url %></a></p>
+  <% end %>
+<% end %>
+<%= link_to 'Back', genres_path %>
