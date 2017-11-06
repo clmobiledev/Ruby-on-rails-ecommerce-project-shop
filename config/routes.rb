@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  root to: 'home#index'
+	resources :games,      only: [:index, :show]
+  resources :developers, only: [:index, :show]
+  resources :genres,     only: [:index, :show]
+  resources :abouts,     only: [:index, :show]
+  resources :contacts,   only: [:index, :show]
+  
+  get 'search_results' => 'games#search_results', as: 'search_results'
+  
   get 'abouts/index'
   get 'contacts/index'
 
@@ -12,15 +21,6 @@ Rails.application.routes.draw do
   get 'games/show'
 
   get 'home/index'
-
-  root to: 'home#index'
-	resources :games, only: [:index, :show]
-  resources :developers, only: [:index, :show]
-  resources :genres, only: [:index, :show]
-  resources :abouts, only: [:index, :show, :edit]
-  resources :contacts, only: [:index, :show, :edit]
-  
-  get 'search_results' => 'games#search_results', as: 'search_results'
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
