@@ -4,6 +4,8 @@ class DevelopersController < ApplicationController
   end
 
   def show
-    @developers = Developer.includes(:games).where(id: params[:id]).order('games.release_date DESC')
+    @developers = Developer.includes(:games)
+                           .where(id: params[:id])
+                           .order('games.release_date DESC')
   end
 end
