@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
   get 'abouts/index'
-
   get 'contacts/index'
 
   get 'genres/index'
-
   get 'genres/show'
 
   get 'developers/index'
-
   get 'developers/show'
 
   get 'games/index'
-
   get 'games/show'
 
   get 'home/index'
@@ -23,6 +19,8 @@ Rails.application.routes.draw do
   resources :genres, only: [:index, :show]
   resources :abouts, only: [:index, :show, :edit]
   resources :contacts, only: [:index, :show, :edit]
+  
+  get 'search_results' => 'games#search_results', as: 'search_results'
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
