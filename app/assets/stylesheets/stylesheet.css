@@ -1,0 +1,13 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+input[type=text] {
+  width: 20px;
+}
+
+img {
+  height: 40%;
+  width: 40%;
+}
