@@ -1,7 +1,5 @@
-<h1>Games</h1>
-<h2><%= @game.title %></h2>
-<p><%= image_tag @game.image_url %></p>
-<p><strong>Release Date:</strong> <%= @game.release_date %></p>
-<p><strong>Price:</strong> <%= number_to_currency @game.price %></p>
-<p><strong>Quantity:</strong> <%= @game.stock_quantity %></p>
+<%= render partial: 'game',
+                    object: @game,
+                    locals: { display_game_link: false } %>
+
 <%= link_to 'Back', games_path %>

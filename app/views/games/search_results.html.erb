@@ -4,5 +4,6 @@
 <% else %>
   <p><%= pluralize(@games.size, 'product') %> found.</p>
   <%= render partial: 'game',
-             collection: @games %>
+             collection: @games,
+             locals: { display_game_link: true } %>
 <% end %>

@@ -1,12 +1,12 @@
-<h1>Games</h1>
-<% @games.each do |game| %>
-  <h2><%= game.title %></h2>
-  <p><%= image_tag game.image_url %></p>
-  <p><strong>Release Date:</strong> <%= game.release_date %></p>
-  <p><strong>Price:</strong> <%= number_to_currency game.price %></p>
-  <p><strong>Quantity:</strong> <%= game.stock_quantity %></p>
-  <a href="/games/<%= game.id %>"></a>
+<h2><%= game.title %></h2>
+<p><%= image_tag game.image_url %></p>
+<p><strong>Release Date:</strong> <%= game.release_date %></p>
+<p><strong>Price:</strong> <%= number_to_currency game.price %></p>
+<p><strong>Quantity:</strong> <%= game.stock_quantity %></p>
+<% if display_game_link %>
   <%= link_to 'Details', game %>
   <!-- <%= link_to 'Details', game_path(game) %> -->
   <!-- <%= link_to 'Details', game_path(id: game.id) %> -->
+<% else %>
+  <a href="/games/<%= game.id %>"></a>
 <% end %>
