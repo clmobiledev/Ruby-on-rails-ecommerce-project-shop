@@ -1,13 +1,13 @@
-<header>
-  <nav>
-    <%= link_to 'Home', root_path %> | 
-    <%= link_to 'Developers', developers_path %> | 
-    <%= link_to 'Genres', genres_path %> | 
-    <%= link_to 'About', abouts_path %> | 
-    <%= link_to 'Contact', contacts_path %>
-  </nav>
-  <%= form_tag search_results_path, method: :get do %>
-    <%= text_field_tag :search_keywords %>
-    <%= submit_tag 'Search' %>
-  <% end %>
-</header>
+  <header>
+    <nav>
+      <%= link_to 'Home', root_path %> | 
+      <%= link_to 'Developers', developers_path %> | 
+      <%= link_to 'Genres', genres_path %> | 
+      <%= link_to 'About', abouts_path %> | 
+      <%= link_to 'Contact', contacts_path %>
+    </nav>
+    <%= form_tag search_results_path, method: :get do %>
+      <%= text_field_tag :search_keywords %>
+      <%= submit_tag 'Search' %>
+    <% end %>
+  </header>
